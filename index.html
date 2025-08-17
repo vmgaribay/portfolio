@@ -5,14 +5,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+     <div class="header_background">
+            <img src="images/photocopy_lappytop2.png" alt="PhotocopyLappytopy">
+        </div>
+    <header id="header-scroll" class="shrink">
+
         <h1>Victoria M. Garibay, Ph.D.</h1>
-        <p>Problem Solver | Data Scientist | Skeptical Machine Learning Enthusiast</p>
         <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Featured Projects</a>
-            <a href="#publications">Publications</a>
-            <a href="#contact">Contact</a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Featured Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -33,70 +38,85 @@
             process helps tremendously and can also provide a great starting 
             point for how to frame the findings in a way that highlights their 
             relevance to the decision maker.
-        <h2>Education</h2>
+        <h3>Education</h3>
         <p>Ph.D. in Agricultural & Biological Engineering, Purdue University</p>
         <p>M.S. in Biological & Agricultural Engineering, Texas A&M University</p>
         <p>B.S. in Biological & Agricultural Engineering, Texas A&M University</p>
 
     </section>
 
+
+
+
+    
     <section id="projects">
         <h2>Featured Projects</h2>
-        <div class="project">
-            <h3>DGL-PTM</h3>
-            <p>The Deep Graph Library Poverty Trap Model (DGL-PTM)is part of an 
+        <div class="project_gallery">
+            <div class="project">
+                <img src="images/edges.png" alt="Edge modification: network link formation and removal diagram.">
+                <div class="project_title">DGL-PTM</div>
+                <div class="project_description">
+                <p>The Deep Graph Library Poverty Trap Model (DGL-PTM) is part of an 
                 ongoing effort in collaboration with the Netherlands eScience Center 
                 to create an Agent Based Model (ABM) framework that supports 
                 communication between agents in a network with a population on 
                 the scale of millions. Supporting elements from the Deep Graph 
                 Library, particularly message-passing, enabled us to leverage 
-                matrix operations on GPUs to achieve the necessary capacity. 
-                Role: keeping the project on track towards research goals, balancing the 
-                ideas of the PI and the eScience team to keep things progressing, and 
-                eventually taking a greater role as a developer when administrative 
-                upheaval impeded the team's ability to continue.
-                Experience gained with: PyTorch, DGL, GitHub collaboration (big one!), 
+                matrix operations on GPUs to achieve the necessary capacity. </p>
+                <p><strong>Role:</strong> keeping the project on track towards research goals, balancing the
+                ideas of the PI and the eScience team to keep things progressing, and
+                eventually taking a greater role as a developer when administrative
+                upheaval impeded the team's ability to continue.</p>
+                <p><strong>Experience gained with:</strong> PyTorch, DGL, GitHub collaboration (big one!),
                 software verification (static analysis, model checking, unit testing),
-                HPC job scheduling, API documentation, socioeconomic ABMs
-                Existing skills exercised: experimental design, technical writing, 
-                Python, pandas, NumPy, matplotlib, seaborn
-            <a href="https://github.com/SDCCA/DGL-PTM/Experiments" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project">
-            <h3>MLP Bellman Equation Replacement</h3>
-            <p>This project was inspired by a need established when scaling up DGL-PTM. 
+                HPC job scheduling, API documentation, socioeconomic ABMs</p>
+                <p><strong>Existing skills exercised:</strong> experimental design, technical writing,
+                Python, pandas, NumPy, matplotlib, seaborn</p>
+                <p><a href="https://github.com/SDCCA/DGL-PTM/tree/experiments" target="_blank">View on GitHub</a></p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/MLP.png" alt="Multilayer perceptron: neural network architecture test structure.">
+                <div class="project_title">MLP Equation Replacement</div>
+                <div class="project_description">
+                <p>This project was inspired by a need established when scaling up DGL-PTM. 
                 the function modeling agent decisions became a tremendous bottleneck. As 
                 a replacement, I developed a Multi-Layer Perceptron (MLP) that predicts 
                 the outputs of the original Bellman equation approximation with an 
-                efficacy that made it a viable replacement.
-                Role: picking a direction for the replacement function, developing a 
-                methodology for selecting a model, conducting the training and testing
-                Experience gained with: Machine Learning, algoritmic documentation
-                Existing skills exercised: PyTorch,experimental design, technical writing, 
-                Python, pandas, NumPy, matplotlib, seaborn, HPC job scheduling, LaTeX
-            <a href="https://github.com/vmgaribay/nnbellman" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project">
-            <h3>Climate Dashboard</h3>
-            <p>This project from my Ph.D.was one of my first experiments in dashboard 
-                development and was extra gratifying as it was made available to a broader 
-                audience. It was a simple tool to geographically organize data available to 
-                the project which spanned across three countries in East Africa. The dashboard 
-                also included aggregated summaries of the data, which were designed as 
-                communication tools for the project team and stakeholders. While the dashboard 
+                efficacy that made it a viable replacement.</p>
+                <p><strong>Role:</strong> picking a direction for the replacement function, developing a
+                methodology for selecting a model, conducting the training and testing</p>
+                <p><strong>Experience gained with:</strong> Machine Learning, algorithmic documentation</p>
+                <p><strong>Existing skills exercised:</strong> PyTorch, experimental design, technical writing,
+                Python, pandas, NumPy, matplotlib, seaborn, HPC job scheduling, LaTeX</p>
+                <p><a href="https://github.com/vmgaribay/nnbellman" target="_blank">View on GitHub</a></p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/Dash1.png" alt="Shiny dashboard: climate data summaries and access.">
+                <div class="project_title">Climate Dashboard</div>
+                <div class="project_description">
+                <p>This project from my Ph.D. was one of my first efforts in dashboard 
+                development. It was extra gratifying because it was made available to a broader 
+                audience. Designed as a simple tool to geographically organize data available to 
+                the project which spanned across three countries in East Africa, the dashboard 
+                also came to include aggregated summaries of the data,serving as a
+                communication tool for the project team and stakeholders. While the dashboard 
                 itself is no longer available and is, as a 2021 project, outdated, 
                 it was a great learning experience which allowed me to explore what I now 
-                acknowledge as a small subset of the possibilities of interactive visualizations.
-                Role: picking a platform for the dashboard, determining its scope given the 
-                available resources, testing the dashboard with stakeholder feedback, arranging 
-                for the app deployment with the help of the Purdue Research Computing team
-                Experience gained with: dashboard development, flexdashboard, Shiny, dygraphs, leaflet
-                Existing skills exercised: data structuring, database querying, data cleaning, 
-                merging data sources, bias correction, R, Plotly, GIS, dplyr, stakeholder communication
-
-            </p>
-            <a href="images/Screenshot 2025-08-13 025947.png" target="_blank">https://app.climate-dashboard.geddes.rcac.purdue.edu/ (no longer active, now links to sad,static image)</a>
+                acknowledge as a small subset of the possibilities of interactive visualizations.</p>
+                <p><strong>Role:</strong> picking a platform for the dashboard, determining its scope given the
+                available resources, testing the dashboard with stakeholder feedback, arranging
+                for the app deployment with the help of the Purdue Research Computing team</p>
+                <p><strong>Experience gained with:</strong> dashboard development, flexdashboard, Shiny, dygraphs, leaflet</p>
+                <p><strong>Existing skills exercised:</strong> data structuring, database querying, data cleaning,
+                merging data sources, bias correction, R, Plotly, GIS, dplyr, stakeholder communication</p>
+                <p><a href="dash_quick_reference.html" target="_blank">https://app.climate-dashboard.geddes.rcac.purdue.edu/ (no longer active, now links to sad image that remains)</a></p>
+                </div>
+            </div>
         </div>
+
+
     </section>
 
 
@@ -105,32 +125,35 @@
         <h2>Publications</h2>
         <h3>Peer-Reviewed Articles</h3>
         <ul>
-            <li> V.M. Garibay. “Accelerated Approximation of Bellman Equation Solutions: Agent Policy Optimization With a Feedforward Neural Network” Lecture Notes in Computer Science (2025):15908.</li>
-            <li>V. Bazyleva, Garibay, V.M. & D. Roy “Trajectory-based global sensitivity analysis in multiscale models”</li>
-            <li>V.M. Garibay, M.W. Gitau, V. Kongo, J. Kisekka, & D. Moriasi. “A Comparative Evaluation of Water Resource Policy Inventories Towards the Improvement of East African Climate and Water Data Infrastructure” Water Resources Management 36 (2022): 4019–4038.</li>
-            <li>V.M. Garibay, M.W. Gitau, N. Kiggundu, & D. Moriasi. “Evaluation of Reanalysis Precipitation Data and Potential Bias Correction Methods for Use in Data-Scarce Areas.” Water Resources Management 35 (2021): 1587–1602.</li>
-            <li>V.M. Garibay, K. Kothari, S. Ale, D.C. Gitz, G. Morgan, & C. Munster. “Determining water-use-efficient irrigation strategies for cotton using the DSSAT CSM CROPGRO-cotton model evaluated with in-season data.” Agricultural Water Management 223 (2019): 105695.</li>
+            <li>V.M. Garibay. "Accelerated Approximation of Bellman Equation Solutions: Agent Policy Optimization With a Feedforward Neural Network" Lecture Notes in Computer Science (2025):15908.</li>
+            <li>V. Bazyleva, Garibay, V.M. & D. Roy. "Trajectory-based global sensitivity analysis in multiscale models"</li>
+            <li>V.M. Garibay, M.W. Gitau, V. Kongo, J. Kisekka, & D. Moriasi. "A Comparative Evaluation of Water Resource Policy Inventories Towards the Improvement of East African Climate and Water Data Infrastructure" Water Resources Management 36 (2022): 4019-4038.</li>
+            <li>V.M. Garibay, M.W. Gitau, N. Kiggundu, & D. Moriasi. "Evaluation of Reanalysis Precipitation Data and Potential Bias Correction Methods for Use in Data-Scarce Areas" Water Resources Management 35 (2021): 1587-1602.</li>
+            <li>V.M. Garibay, K. Kothari, S. Ale, D.C. Gitz, G. Morgan, & C. Munster. "Determining water-use-efficient irrigation strategies for cotton using the DSSAT CSM CROPGRO-cotton model evaluated with in-season data" Agricultural Water Management 223 (2019): 105695.</li>
         </ul>
         <h3>Datasets</h3>
         <ul>
-            <li>“Precipitation and Temperature Data for Select 5 Stations in Kenya (1979-2020)” DOI: 10.4231/QV4A-5J43</li>
-            <li>“Precipitation and Temperature Data for Select 3 Stations in Tanzania (1979-2020)” DOI: 10.4231/2ARZ-BY05</li>
-            <li>“Precipitation and Temperature Data for Select 4 Stations in Uganda (1979-2020)” DOI: 10.4231/6YK1-CQ13</li>
+            <li>"Precipitation and Temperature Data for Select 5 Stations in Kenya (1979-2020)" DOI: 10.4231/QV4A-5J43</li>
+            <li>"Precipitation and Temperature Data for Select 3 Stations in Tanzania (1979-2020)" DOI: 10.4231/2ARZ-BY05</li>
+            <li>"Precipitation and Temperature Data for Select 4 Stations in Uganda (1979-2020)" DOI: 10.4231/6YK1-CQ13</li>
             <li>"Precipitation and Temperature Data from 10 CMIP6 Models for Sasumua River Watershed, Kenya." DOI: 10.4231/DATG-PB58</li>
             <li>"Precipitation and Temperature Data from 10 CMIP6 Models for Select 3 Stations in Tanzania." DOI: 10.4231/CDF2-2B03</li>
-            <li>“Precipitation and Temperature Data from 10 CMIP6 Models for Select 4 Stations in Uganda.” DOI:10.4231/8QSZ-5V58</li>
+            <li>"Precipitation and Temperature Data from 10 CMIP6 Models for Select 4 Stations in Uganda." DOI: 10.4231/8QSZ-5V58</li>
             <li>"Precipitation and Temperature Data from 10 CMIP6 Models for Select 5 Stations in Kenya." DOI: 10.4231/G3T3-5287</li>
         </ul>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="https://vmgaribay.github.io/portfolio/contact_form.html">Contact Form</a></p>
+        <p>Email: <a href="contact_form.html">Contact Form</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/victoria-garibay-91137b97/" target="_blank">Victoria's Profile</a></p>
+        <p></p>
     </section>
 
     <footer>
         <p>&copy; 2025 Victoria Garibay</p>
     </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="script.js" defer></script>
 </body>
 </html>

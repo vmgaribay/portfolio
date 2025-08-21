@@ -5,9 +5,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <div class="header_background">
-            <img src="images/photocopy_lappytop2.png" alt="PhotocopyLappytopy">
-        </div>
+    <div class="header_background">
+    <picture>
+    <source
+      type="image/webp"
+      srcset="images/photocopy_lappytop.webp"
+      sizes="100vw" />
+        <img src="images/photocopy_lappytop.png"
+             srcset="images/photocopy_lappytop_smaller.png 800w,
+              images/photocopy_lappytop_small.png 2760w,
+              images/photocopy_lappytop.png 3983w"
+            sizes="100vw"
+            alt="PhotocopyLappytoppy"
+            decoding="async"
+            fetchpriority="high" />
+    </picture>
+    </div>
     <header id="header-scroll" class="shrink">
 
         <h1><a href="#about">Victoria M. Garibay, Ph.D.</a></h1>

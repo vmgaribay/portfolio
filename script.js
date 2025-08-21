@@ -59,7 +59,6 @@ $(window).on('scroll', function () {
         clearActive();
       });
     });
-<<<<<<< HEAD
 
 
 
@@ -67,5 +66,3 @@ $(window).on('scroll', function () {
 document.getElementById('hamburger').onclick = function() {
   document.querySelector('nav').classList.toggle('active');
 };
-=======
->>>>>>> 1d6d00e5dd39c4b078b05dfef10edf6d19f97b25

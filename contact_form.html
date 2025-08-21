@@ -1,3 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Victoria M. Garibay, Ph.D.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header-scroll" class="shrink">
+
+        <h1><a href="index.html">Victoria M. Garibay, Ph.D.</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Featured Projects</a></li>
+                <li><a href="index.html#publications">Publications</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    </body>
+    <section>
+      <h2>Contact Form</h2>
+      <p>Thank you for your interest in emailing me.
+        Please close the message with your preferred name and title so that I may address you accordingly. Thanks!</p>
+
 <form action="https://formspree.io/f/mkgzyplr" method="POST">
   <label for="email">Your Email Address:</label>
   <input type="email" name="email" id="email" required>
@@ -7,11 +33,13 @@
   
   <button type="submit">Send</button>
 </form>
-<div id="confirmation" style="display:none; color:green;">
+
+<div id="confirmation" style="display:none;">
   Thank you for your message! 
   If you do not hear back within a week, your email may have been filtered. 
-  Please, don't hesitate to reach out on LinkedIn (see Contact section).
+  Please, don't hesitate to reach out with a message on LinkedIn, too! (see Contact section).
 </div>
+ </section>
 <script>
   // Confirm form submission
   document.querySelector('form').addEventListener('submit', function(e) {
@@ -30,3 +58,5 @@
     });
   });
 </script>
+</body>
+</html>

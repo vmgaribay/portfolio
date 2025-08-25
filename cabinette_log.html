@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Cabinette — Project Log</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <main class="log">
+    <h1>Cabinette — Project Log</h1>
+    <p>This page will track the progress of my alternative acomodation siting analysis. I don't have much time to devote to it, unfortunately, but it will have served my purpose if it does any of the following...</p>
+    <ul>
+        <li>refreshes my memory on SQL, which I haven't touched since early in my Ph.D.</li>
+        <li>helps me gain familiarity with framing problems and solutions in a business context.</li>
+        <li>shows me exactly where to launch my cabinette empire.</li>
+    </ul>
+    <p>I will be using <span style="display: inline-block; padding: 0.1rem 0.4rem; border-radius: 9px; background: rgba(var(--light), 0.12); font-size: 0.85rem; border: 2px solid rgba(13, 255, 0, 0.25);">DMAIC</span> and <span style="display: inline-block; padding: 0.1rem 0.4rem; border-radius: 9px; background: rgba(var(--light), 0.12); font-size: 0.85rem; border: 2px solid rgba(170, 0, 255, 0.25);">Agile</span> 
+  principles to guide my work as indicated by the tags in each entry. I will do my best to wear both user and product owner hats and keep the tool as realistic as possible; obviously, there are very real concerns about feasibility (parcel slope favorability of state laws, wildfire risk, etc.) which extend beyond the scope of this project. They may be considered at a later stage.</p>
+
+    <section class="entry">
+      <time datetime="2025-08-23">2025-08-23</time>
+      <div class="tags">
+        <span class="pill dmaic">Phase: Define</span><span class="pill agile">Sprint: 1</span><span class="pill agile">Status: done</span><span class="pill misc">scoping</span><span class="pill misc">creative</span><span class="pill misc">foundation</span>
+      </div>
+      <h3> Determinine the scope of the project based on available data</h3>
+        <ul>
+      <li>User story: I would like to target my investment in launching a new cabinette lodging enterprise. 
+        I want a ranked list of potential sites near U.S. National Parks to prioritize scouting efforts. 
+        Some considerations I have are the desirability of proximity to multiple parks and consciousness of how competitive the market is.
+      </li>
+      <li>Acceptance: <br>
+        [x] problem statement documented<br>
+        [x] KPIs documented <br>
+      </li>
+  </ul>
+
+    </section>
+
+<section class="entry" >
+  <time datetime="2025-08-24">2025-08-24</time>
+  <div class="tags">
+    <span class="pill dmaic">Phase: Measure</span><span class="pill agile">Sprint: 1</span><span class="pill agile">Status: todo</span><span class="pill misc">data sourcing</span>
+  </div>
+  <h3>Spike: gather initial datasets</h3>
+  <ul>
+    <li>Acceptance: <br>
+      [x] NPS visitation data <br>
+      [&ensp;] park visitor center coordinate data <br>
+      [&ensp;] OSM lodging and road data<br>
+      [x] land status (public/private) data<br>
+      [x] flood zone data<br>
+      [x] critical habitat data<br>
+      [&ensp;] files documented in DATA_SOURCES.md
+    </li>
+    <p>Notes: Monthly summaries of NPS visitation data from 2020-2024 were downloaded via the <a href="https://irma.nps.gov/Stats/SSRSReports/National%20Reports/Query%20Builder%20for%20Public%20Use%20Statistics%20(1979%20-%20Last%20Calendar%20Year)">Query Builder for Public Use Statistics</a>(note: COVID Shutdown impact currently ignored for this project). Target columns and their definitions are documented in DATA_SOURCES.md.
+    A 2023 map of NPS buildings has been downloaded from <a href="https://www.arcgis.com/home/item.html?id=54fc5620d3bb4793beeb16e9c62dfdd6#overview">ArcGIS</a>. It should be possible to filter features by building name and average the polygons to a point.
+    Land status data has been downloaded from <a href="https://www.sciencebase.gov/catalog/item/6759abcfd34edfeb8710a004">ScienceBase</a> for states within the project scope.
+  FEMA's <a href="https://www.fema.gov/flood-maps/national-flood-hazard-layer">National Flood Hazard Layer</a> will be used to assess flood risk. The U.S. Fish and Wildlife Service <a href="https://ecos.fws.gov/ecp/report/table/critical-habitat.html">information</a> on critical habitats will be used to avoid protected areas.
+
+</section>

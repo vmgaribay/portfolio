@@ -13,10 +13,10 @@
     <ul>
         <li>refreshes my memory on SQL, which I haven't touched since early in my Ph.D.</li>
         <li>helps me gain familiarity with framing problems and solutions in a business context.</li>
-        <li>shows me exactly where to launch my cabinette empire.</li>
+        <li>shows me exactly where to launch my cabinette <del>empire</del> enterprise</li>
     </ul>
     <p>I will be using <span style="display: inline-block; padding: 0.1rem 0.4rem; border-radius: 9px; background: rgba(var(--light), 0.12); font-size: 0.85rem; border: 2px solid rgba(13, 255, 0, 0.25);">DMAIC</span> and <span style="display: inline-block; padding: 0.1rem 0.4rem; border-radius: 9px; background: rgba(var(--light), 0.12); font-size: 0.85rem; border: 2px solid rgba(170, 0, 255, 0.25);">Agile</span> 
-  principles to guide my work as indicated by the tags in each entry. I will do my best to wear both user and product owner hats and keep the tool as realistic as possible; obviously, there are very real concerns about feasibility (parcel slope favorability of state laws, wildfire risk, etc.) which extend beyond the scope of this project. They may be considered at a later stage.</p>
+  principles to guide my work as indicated by the tags in each entry. I will do my best to wear both user and product owner hats and keep the tool as realistic as possible; obviously, there are very real concerns about feasibility (parcel slope, favorability of state laws, wildfire risk, etc.) which extend beyond the scope of this project. They may be considered at a later stage.</p>
 
     <section class="entry">
       <time datetime="2025-08-23">2025-08-23</time>
@@ -40,22 +40,49 @@
 <section class="entry" >
   <time datetime="2025-08-24">2025-08-24</time>
   <div class="tags">
-    <span class="pill dmaic">Phase: Measure</span><span class="pill agile">Sprint: 1</span><span class="pill agile">Status: todo</span><span class="pill misc">data sourcing</span>
+    <span class="pill dmaic">Phase: Measure</span><span class="pill agile">Sprint: 1</span><span class="pill agile">Status: todo</span><span class="pill misc">data sourcing</span><span class="pill misc">data documentation</span>
   </div>
   <h3>Spike: gather initial datasets</h3>
   <ul>
     <li>Acceptance: <br>
       [x] NPS visitation data <br>
-      [&ensp;] park visitor center coordinate data <br>
-      [&ensp;] OSM lodging and road data<br>
+      [x] park visitor center coordinate data <br>
+      [x] OSM lodging and road data<br>
       [x] land status (public/private) data<br>
-      [x] flood zone data<br>
+      [&ensp;] flood zone data<br>
       [x] critical habitat data<br>
       [&ensp;] files documented in DATA_SOURCES.md
     </li>
-    <p>Notes: Monthly summaries of NPS visitation data from 2020-2024 were downloaded via the <a href="https://irma.nps.gov/Stats/SSRSReports/National%20Reports/Query%20Builder%20for%20Public%20Use%20Statistics%20(1979%20-%20Last%20Calendar%20Year)">Query Builder for Public Use Statistics</a>(note: COVID Shutdown impact currently ignored for this project). Target columns and their definitions are documented in DATA_SOURCES.md.
+    <p>Notes: Monthly summaries of NPS visitation data from 2020-2024 were downloaded via the <a href="https://irma.nps.gov/Stats/SSRSReports/National%20Reports/Query%20Builder%20for%20Public%20Use%20Statistics%20(1979%20-%20Last%20Calendar%20Year)">Query Builder for Public Use Statistics</a> (note: COVID Shutdown impact currently ignored for this project). Target columns and their definitions are documented in DATA_SOURCES.md.
     A 2023 map of NPS buildings has been downloaded from <a href="https://www.arcgis.com/home/item.html?id=54fc5620d3bb4793beeb16e9c62dfdd6#overview">ArcGIS</a>. It should be possible to filter features by building name and average the polygons to a point.
     Land status data has been downloaded from <a href="https://www.sciencebase.gov/catalog/item/6759abcfd34edfeb8710a004">ScienceBase</a> for states within the project scope.
   FEMA's <a href="https://www.fema.gov/flood-maps/national-flood-hazard-layer">National Flood Hazard Layer</a> will be used to assess flood risk. The U.S. Fish and Wildlife Service <a href="https://ecos.fws.gov/ecp/report/table/critical-habitat.html">information</a> on critical habitats will be used to avoid protected areas.
 
+</section>
+
+<section class="entry">
+  <time datetime="2025-09-01">2025-09-01</time>
+  <div class="tags">
+    <span class="pill dmaic">Phase: Measure</span><span class="pill agile">Sprint: 2</span><span class="pill agile">Status: in progress</span>
+    <span class="pill misc">data preprocessing</span><span class="pill misc">data documentation</span>
+
+  </div>
+  <h3>Sprint 1 Review & Sprint 2 Planning</h3>
+  <ul>
+    <li>Review of Sprint 1:
+      <ul>
+        <li>Completed: NPS visitation data, visitor center coordinates, OSM lodging/road data, land status data, critical habitat data</li>
+        <li>Incomplete: flood zone data, documentation in DATA_SOURCES.md (OSM info pending)</li>
+        <li>Notes: There was some trouble with the flood zone data acquisition; it will be deprioritized until further notice.</li>
+      </ul>
+    </li>
+    <li>Acceptance:
+      <ul>
+        <li>[&ensp;] All files documented in DATA_SOURCES.md</li>
+        <li>[&ensp;] Perform basic quality checks on all sourced datasets</li>
+        <li>[&ensp;] Preprocess the sourced datasets (consistent projection, clipping to target region, etc.)</li>
+      </ul>
+    </li>
+    <li>Retrospective: Sprint 1 was successful in gathering most of the required datasets, but some challenges were encountered with availability of the flood zone data. Perhaps it was unnecessarily ambitious to include it in the first iteration of the project. Sprint 2 will focus on ensuring all datasets are preprocessed and properly documented.</li>
+  </ul>
 </section>

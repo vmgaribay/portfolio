@@ -40,7 +40,7 @@
 <section class="entry" >
   <time datetime="2025-08-24">2025-08-24</time>
   <div class="tags">
-    <span class="pill dmaic">Phase: Measure</span><span class="pill agile">Sprint: 1</span><span class="pill agile">Status: todo</span><span class="pill misc">data sourcing</span><span class="pill misc">data documentation</span>
+    <span class="pill dmaic">Phase: Measure</span><span class="pill agile">Sprint: 1</span><span class="pill agile">Status: done</span><span class="pill misc">data sourcing</span><span class="pill misc">data documentation</span>
   </div>
   <h3>Spike: gather initial datasets</h3>
   <ul>
@@ -49,9 +49,9 @@
       [x] park visitor center coordinate data <br>
       [x] OSM lodging and road data<br>
       [x] land status (public/private) data<br>
-      [&ensp;] flood zone data<br>
+      <del>[&ensp;] flood zone data</del>[deferred]<br>
       [x] critical habitat data<br>
-      [&ensp;] files documented in DATA_SOURCES.md
+      [x] files documented in DATA_SOURCES.md
     </li>
     <p>Notes: Monthly summaries of NPS visitation data from 2020-2024 were downloaded via the <a href="https://irma.nps.gov/Stats/SSRSReports/National%20Reports/Query%20Builder%20for%20Public%20Use%20Statistics%20(1979%20-%20Last%20Calendar%20Year)">Query Builder for Public Use Statistics</a> (note: COVID Shutdown impact currently ignored for this project). Target columns and their definitions are documented in DATA_SOURCES.md.
     A 2023 map of NPS buildings has been downloaded from <a href="https://www.arcgis.com/home/item.html?id=54fc5620d3bb4793beeb16e9c62dfdd6#overview">ArcGIS</a>. It should be possible to filter features by building name and average the polygons to a point.
@@ -63,7 +63,7 @@
 <section class="entry">
   <time datetime="2025-09-01">2025-09-01</time>
   <div class="tags">
-    <span class="pill dmaic">Phase: Measure</span><span class="pill agile">Sprint: 2</span><span class="pill agile">Status: in progress</span>
+    <span class="pill dmaic">Phase: Measure</span><span class="pill agile">Sprint: 2</span><span class="pill agile">Status: done</span>
     <span class="pill misc">data preprocessing</span><span class="pill misc">data documentation</span>
 
   </div>
@@ -71,18 +71,55 @@
   <ul>
     <li>Review of Sprint 1:
       <ul>
-        <li>Completed: NPS visitation data, visitor center coordinates, OSM lodging/road data, land status data, critical habitat data</li>
+        <li>Completed: NPS visitation data, visitor center coordinates, OSM lodging data, land status data, critical habitat data</li>
         <li>Incomplete: flood zone data, documentation in DATA_SOURCES.md (OSM info pending)</li>
         <li>Notes: There was some trouble with the flood zone data acquisition; it will be deprioritized until further notice.</li>
       </ul>
     </li>
     <li>Acceptance:
       <ul>
-        <li>[&ensp;] All files documented in DATA_SOURCES.md</li>
-        <li>[&ensp;] Perform basic quality checks on all sourced datasets</li>
-        <li>[&ensp;] Preprocess the sourced datasets (consistent projection, clipping to target region, etc.)</li>
+        <li>[x] All files documented in DATA_SOURCES.md</li>
+        <li>[x] Perform basic quality checks on all sourced datasets</li>
+        <li>[x] Preprocess the sourced datasets (consistent projection, clipping to target region)</li>
       </ul>
     </li>
-    <li>Retrospective: Sprint 1 was successful in gathering most of the required datasets, but some challenges were encountered with availability of the flood zone data. Perhaps it was unnecessarily ambitious to include it in the first iteration of the project. Sprint 2 will focus on ensuring all datasets are preprocessed and properly documented.</li>
+    <li>Retrospective: Sprint 1 was successful in gathering most of the required datasets, but some challenges were encountered with downloading the flood zone data. There was also an error in querying the OSM road data. A replacement, the National Transportation Atlas Database, will be used instead. This data will be acquired and preprocessed in Sprint 2, which will focus on ensuring all datasets are preprocessed and properly documented. The product owner has approved the deferral of flood zone data incorporation and the replacement road dataset as keeping development on schedule is the top priority. The product user is satisfied with the reduction in features for this iteration.</li>
+  </ul>
+</section>
+
+<section class="entry">
+  <time datetime="2025-09-08">2025-09-08</time>
+  <div class="tags">
+    <span class="pill dmaic">Phase: Analyze</span><span class="pill dmaic">Phase: Design</span><span class="pill agile">Sprint: 3</span>
+    <span class="pill agile">Status: in progress</span><span class="pill misc">scoring</span><span class="pill misc">spatial analysis</span>
+  </div>
+  <h3>Sprint 3 Planning-Begin site suitability analysis</h3>
+  <ul>
+    <li>Acceptance:
+      <ul>
+        <li>[&ensp;] Define site scoring criteria in terms of demand, access, and competition</li>
+        <li>[&ensp;] Design and implement workflow for identification of candidate locations (i.e., private land within 50 miles of park visitor centers)</li>
+        <li>[&ensp;] Design workflow for adjustable scoring of candidate locations</li>
+      </ul>
+    </li>
+    <li>Notes: All essential layers for the first iteration (visitor centers, visitation, lodging, roads, land status) have been preprocessed and loaded into the database. The next step is to develop scoring criteria for new cabin sites. The product owner wants to keep the scoring weights adjustable so that they may be readily modified and explored by the product user (who also happens to be me).</li>
+    <li>Retrospective: Sprint 2 was successful in establishing a foundation for the analysis.</li>
+  </ul>
+</section>
+
+<section class="entry">
+  <time datetime="2025-09-09">2025-09-09</time>
+  <div class="tags">
+    <span class="pill dmaic">Phase: Design</span><span class="pill agile">Sprint: 4</span>
+    <span class="pill agile">Status: todo</span><span class="pill misc">ui-design</span><span class="pill misc">visualization</span>
+    </div>
+  <h3>Sprint 4 Planning</h3>
+  <ul>
+    <li>Acceptance:
+      <ul>
+        <li>[&ensp;] Create interactive dashboard to visualize and organize sites and scores</li>
+      </ul>
+    </li>
+    <li>Notes: The UI of the dashboard should be geographic and intuitive, allow for easy exploration of alternative site scoring weights, and have clear visualizations of site scores and rankings. The main view should be of the top sites in the entire study region. Visitor centers should be selectable on the map to view their top site candidates. Sites themselves should be available for selection on the map to see their properties and scoring breakdowns.</li>
   </ul>
 </section>

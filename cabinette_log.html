@@ -53,10 +53,11 @@
       [x] critical habitat data<br>
       [x] files documented in DATA_SOURCES.md
     </li>
-    <p>Notes: Monthly summaries of NPS visitation data from 2020-2024 were downloaded via the <a href="https://irma.nps.gov/Stats/SSRSReports/National%20Reports/Query%20Builder%20for%20Public%20Use%20Statistics%20(1979%20-%20Last%20Calendar%20Year)">Query Builder for Public Use Statistics</a> (note: COVID Shutdown impact currently ignored for this project). Target columns and their definitions are documented in DATA_SOURCES.md.
+    <li>Notes: Monthly summaries of NPS visitation data from 2020-2024 were downloaded via the <a href="https://irma.nps.gov/Stats/SSRSReports/National%20Reports/Query%20Builder%20for%20Public%20Use%20Statistics%20(1979%20-%20Last%20Calendar%20Year)">Query Builder for Public Use Statistics</a> (note: COVID Shutdown impact currently ignored for this project). Target columns and their definitions are documented in DATA_SOURCES.md.
     A 2023 map of NPS buildings has been downloaded from <a href="https://www.arcgis.com/home/item.html?id=54fc5620d3bb4793beeb16e9c62dfdd6#overview">ArcGIS</a>. It should be possible to filter features by building name and average the polygons to a point.
     Land status data has been downloaded from <a href="https://www.sciencebase.gov/catalog/item/6759abcfd34edfeb8710a004">ScienceBase</a> for states within the project scope.
-  FEMA's <a href="https://www.fema.gov/flood-maps/national-flood-hazard-layer">National Flood Hazard Layer</a> will be used to assess flood risk. The U.S. Fish and Wildlife Service <a href="https://ecos.fws.gov/ecp/report/table/critical-habitat.html">information</a> on critical habitats will be used to avoid protected areas.
+  FEMA's <a href="https://www.fema.gov/flood-maps/national-flood-hazard-layer">National Flood Hazard Layer</a> will be used to assess flood risk. The U.S. Fish and Wildlife Service <a href="https://ecos.fws.gov/ecp/report/table/critical-habitat.html">information</a> on critical habitats will be used to avoid protected areas.</li>
+  </ul>
 
 </section>
 
@@ -76,12 +77,10 @@
         <li>Notes: There was some trouble with the flood zone data acquisition; it will be deprioritized until further notice.</li>
       </ul>
     </li>
-    <li>Acceptance:
-      <ul>
-        <li>[x] All files documented in DATA_SOURCES.md</li>
-        <li>[x] Perform basic quality checks on all sourced datasets</li>
-        <li>[x] Preprocess the sourced datasets (consistent projection, clipping to target region)</li>
-      </ul>
+    <li>Acceptance:<br>
+        [x] All files documented in DATA_SOURCES.md<br>
+        [x] Perform basic quality checks on all sourced datasets<br>
+        [x] Preprocess the sourced datasets (consistent projection, clipping to target region)<br>
     </li>
     <li>Retrospective: Sprint 1 was successful in gathering most of the required datasets, but some challenges were encountered with downloading the flood zone data. There was also an error in querying the OSM road data. A replacement, the National Transportation Atlas Database, will be used instead. This data will be acquired and preprocessed in Sprint 2, which will focus on ensuring all datasets are preprocessed and properly documented. The product owner has approved the deferral of flood zone data incorporation and the replacement road dataset as keeping development on schedule is the top priority. The product user is satisfied with the reduction in features for this iteration.</li>
   </ul>
@@ -95,12 +94,11 @@
   </div>
   <h3>Sprint 3 Planning-Begin site suitability analysis</h3>
   <ul>
-    <li>Acceptance:
-      <ul>
-        <li>[&ensp;] Define site scoring criteria in terms of demand, access, and competition</li>
-        <li>[&ensp;] Design and implement workflow for identification of candidate locations (i.e., private land within 50 miles of park visitor centers)</li>
-        <li>[&ensp;] Design workflow for adjustable scoring of candidate locations</li>
-      </ul>
+    <li>Acceptance:<br>
+        [&ensp;] Define site scoring criteria in terms of demand, access, and competition<br>
+        [&ensp;] Design and implement workflow for identification of candidate locations (i.e., land with no known constraints within 30 miles of park visitor centers)<br>
+        [&ensp;] Design and implement workflow for calculation of candidate location features (e.g., proximity to visitor centers, access to roads)<br>
+        [&ensp;] Design workflow for adjustable scoring of candidate locations  <br>
     </li>
     <li>Notes: All essential layers for the first iteration (visitor centers, visitation, lodging, roads, land status) have been preprocessed and loaded into the database. The next step is to develop scoring criteria for new cabin sites. The product owner wants to keep the scoring weights adjustable so that they may be readily modified and explored by the product user (who also happens to be me).</li>
     <li>Retrospective: Sprint 2 was successful in establishing a foundation for the analysis.</li>
@@ -115,10 +113,8 @@
     </div>
   <h3>Sprint 4 Planning</h3>
   <ul>
-    <li>Acceptance:
-      <ul>
-        <li>[&ensp;] Create interactive dashboard to visualize and organize sites and scores</li>
-      </ul>
+    <li>Acceptance:<br>
+        [&ensp;] Create interactive dashboard to visualize and organize sites and scores<br>
     </li>
     <li>Notes: The UI of the dashboard should be geographic and intuitive, allow for easy exploration of alternative site scoring weights, and have clear visualizations of site scores and rankings. The main view should be of the top sites in the entire study region. Visitor centers should be selectable on the map to view their top site candidates. Sites themselves should be available for selection on the map to see their properties and scoring breakdowns.</li>
   </ul>

@@ -108,7 +108,7 @@
                 late September 2025. The project log is updated regularly (available below).
                 </p>
                 <p><strong>Role:</strong> leading the project from inception to completion and ensuring timely delivery of project milestones</p>
-                <p><strong>Upon completion, experience gained with:</strong> DMAIC principles, PostGreSQL, Power BI</p>
+                <p><strong>Upon completion, experience gained with:</strong> DMAIC principles, PostgreSQL, Power BI</p>
                 <p><strong>Existing skills exercised:</strong> project management, problem framing, product development, database querying, data cleaning,
                 data engineering, dashboard development, UX design, Agile methodology, geospatial analytics</p>
                 <p><a href="cabinette_log.html" target="_blank">Cabinette Project Log</a></p>
@@ -153,6 +153,29 @@
                 merging data sources, bias correction, R, Plotly, GIS, dplyr, stakeholder communication</p>
                 <p><a href="dash_quick_reference.html" target="_blank">https://app.climate-dashboard.geddes.rcac.purdue.edu/ (no longer active, now links to sad image that remains)</a></p>
                 </div>
+            </div>        
+            <div class="project">
+                <img src="images/Architecture Diagram.png" alt="Portfolio Assistant architecture diagram">
+                <div class="project_title">Conversational AI Assistant</div>
+                <div class="project_description">
+                <p>This project features Lenny, a conversational AI assistant designed to help visitors 
+                to this website. Lenny served well as a practical way of exploring the possibilities
+                of cloud computing and LLMs (large language models). The assistant is available for use 
+                below. Lenny was implemented through the integration of an Azure Foundry AI (GPT-4.1-mini) 
+                and Azure AI Search services (orchestrated within an Azure Function). The AI Search 
+                service indexes documents pertaining to my work and expertise, allowing the assistant 
+                to give contextually relevant responses to user queries.</p>
+                <p><strong>Role:</strong> <p><strong>Role:</strong> requirements gathering, technology selection, 
+                    solution architecture, Azure resource management, end-to-end implementation (Python, 
+                    Azure Functions, AI Search, OpenAI/Foundry), integration of conversational AI and 
+                    semantic search, deployment, user experience testing, and iterative improvement.</p>
+                <p><strong>Experience gained with:</strong> cloud computing, API development, Azure, conversational 
+                    AI, LLM integration, semantic search indices, CI/CD automation, managing secrets</p>
+                <p><strong>Existing skills exercised:</strong> python, version control, static analysis, 
+                    unit testing, project management, UX design, HTML, CSS, JS</p>
+                <p><a href="portfolio_assistant.html" target="_blank">Project Management Summary</a></p>
+                <p><a href="https://github.com/vmgaribay/portfolio-assistant" target="_blank">View on GitHub</a></p>
+                </div>
             </div>
         </div>
 
@@ -182,6 +205,23 @@
             <li>"Precipitation and Temperature Data from 10 CMIP6 Models for Select 4 Stations in Uganda." <a href="https://doi.org/10.4231/8QSZ-5V58" target="_blank">DOI: 10.4231/8QSZ-5V58</a></li>
             <li>"Precipitation and Temperature Data from 10 CMIP6 Models for Select 5 Stations in Kenya." <a href="https://doi.org/10.4231/G3T3-5287" target="_blank">DOI: 10.4231/G3T3-5287</a></li>
         </ul>
+    </section>
+
+        <section id="chat">
+        <h2>Ask The Portfolio Assistant...</h2>
+        <p>This is my respected associate, Lenny:<br>
+        <img id="lenny-gif" src="images/static-elephant.gif" alt="Lenny" style=" width:105px; height:140px; margin-left: auto;
+  margin-right: auto; display: block;"><br>
+
+        Lenny has access to my portfolio content and even some of my publications, so it should be able to answer questions about my work and experience.
+        </p>
+        <div id="chat-container">
+            <ul id="chat-log" aria-live="polite"></ul>
+            <form id="chat-form">
+                <input id="chat-input" type="text" placeholder="What would you like to know about Victoria?" required />
+                <button id="chat-send" type="submit">Send</button>
+            </form>
+        </div>
     </section>
 
     <section id="contact">

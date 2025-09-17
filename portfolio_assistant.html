@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Portfolio Assistant: Project Management Summary</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <h1>Portfolio Assistant: Project Management Summary</h1>
+  <h2>Project Overview</h2>
+  <ul>
+    <li>Description: A conversational assistant developed to answer questions 
+      about my portfolio and qualifications using cloud computing and AI services.</li>
+    <li>Code: <a href="https://github.com/Victoria/portfolio_assistant">GitHub Repository</a></li>
+    <li>Approach: Given the planned timeline (4-5 days), I am using an iterative, 
+      Agile-inspired approach. I am focusing on immediately gathering requirements, 
+planning the core features, and establishing what cycles of implementation 
+and review may be required. At the end of each cycle, I will assess progress, 
+and leave room to refine the plan as needed.</li>
+  
+
+<li>Phases:
+<ul>
+  <li>Requirements gathering</li>
+  <li>Design and architecture</li>
+  <li>Implementation</li>
+  <li>Testing and QA</li>
+  <li>Deployment</li>
+  <li>Review and retrospective</li>
+</ul>
+</li>
+</ul>
+  <h2>Project Log</h2>
+    <section class="entry">
+     <time datetime="2025-09-11">2025-09-11</time>
+     <div class="tags">
+         <span class="pill dmaic">Phase: Define</span><span class="pill dmaic">Phase: Measure</span><span class="pill agile">Day: 1</span><span class="pill agile">Status: done</span><span class="pill misc">scoping</span><span class="pill misc">requirements</span><span class="pill misc">learning</span>
+     </div>
+        <h3>Day 1: Requirements Gathering, Learning, and Planning</h3>
+        <ul>
+          <li>Goals:
+            <ul>
+              <li>Define project requirements and constraints</li>
+              <li>Identify key features/functionalities</li>
+              <li>Research relevant technologies</li>
+              <li>Draft initial plan</li>
+            </ul>
+          </li>
+          <li>Outcomes:
+            <ul>
+              <li>Set the hard limit for project completion to 5 days</li>
+              <li>Defined key features:
+                <ul>
+                  <li>Conversational interface (ultimately for use on webpage)</li>
+                  <li>Responses informed by documents that I provide</li>
+                  <li>Deployment via GitHub Actions (including linter and tests)</li>
+                </ul>
+                </li>
+                <li>Identified key constraints:
+                  <ul>
+                    <li>Limited time (4-5 days)</li>
+                    <li>Limited budget</li>
+                  </ul>
+                </li>
+                <li>Selected Azure Functions due to good documentation and fairly comprehensive free trial of Azure services</li>
+                <li>Started basic course on Microsoft Azure Fundamentals</li>
+                <li>Created a storage account</li>
+                <li>Drafted initial project plan:</li>
+                <ul>
+                  <li>Day 1: Requirements gathering, learning, and planning</li>
+                  <li>Day 2: Finalize system architecture and begin work on chat agent</li>
+                  <li>Day 3: Deploy function for agent and create basic chat interface</li>
+                  <li>Day 4: Set up semantic search and document base</li>
+                  <li>Day 5: Deploy agent with integrated search, testing, QA</li>
+                </ul>
+              </ul>
+          </li>
+          <li>Next Steps:
+            <ul>
+              <li>Finalize system architecture</li>
+              <li>Set up Azure resources</li>
+              <li>Define a preliminary file structure</li>
+            </ul>
+          </li>
+        </ul>
+    </section>
+<section class="entry">
+     <time datetime="2025-09-12">2025-09-12</time>
+     <div class="tags">
+         <span class="pill dmaic">Phase: Measure</span><span class="pill dmaic">Phase: Analyze</span><span class="pill dmaic">Phase: Design</span><span class="pill agile">Day: 2</span><span class="pill agile">Status: done</span><span class="pill misc">learning</span><span class="pill misc">architecture</span><span class="pill misc">development</span>
+     </div>
+        <h3>Day 2: Finalize System Architecture and Set Up LLM Resource</h3>
+        <ul>
+          <li>Goals:
+            <ul>
+              <li>Set up conversational AI resource</li>
+              <li>Finalize system architecture</li>
+              <li>Begin development of chat agent</li>
+              <li>Set up GitHub repository</li>
+            </ul>
+          </li>
+          <li>Outcomes:
+            <ul>
+              <li>Completed Azure Fundamentals Course</li>
+              <li>Set up Azure AI Foundry resource (GPT-4.1)</li>
+                <li>System architecture:
+                    <ul>
+                    <li>Azure Function App to coordinate resource interactions</li>
+                    <li>Azure AI Foundry for language model</li>
+                    <li>Azure AI Search for context retrieval</li>
+                    <li>Azure Blob Storage for document storage</li>
+                    <li>GitHub Actions for CI/CD</li>
+                    </ul>
+                </li>
+                <li>Set up local development environment (Python, Azure Functions Core Tools)</li>
+                <li>Set up basic file structure</li>
+                <li>Began development of (agent_client.py) AgentClient class</li>
+                <li>Began development of (main.py) function app</li>
+            </ul>
+          </li>
+          <li>Backlog:
+            <ul>
+              <li>Set up GitHub repository</li>
+            </ul>
+          </li>
+          <li>Next Steps:
+            <ul>
+              <li>Set up function app</li>
+              <li>Continue development of chat agent</li>
+              <li>Test chat functionality locally</li>
+              <li>Deploy function app</li>
+            </ul>
+          </li>
+        </ul>
+    </section>
+<section class="entry">
+     <time datetime="2025-09-13">2025-09-13</time>
+     <div class="tags">
+         <span class="pill dmaic">Phase: Design</span><span class="pill dmaic">Phase: Verify</span><span class="pill agile">Day: 3</span><span class="pill agile">Status: done</span><span class="pill misc">testing</span><span class="pill misc">development</span><span class="pill misc">deployment</span>
+        </div>
+        <h3>Day 3: Deploy Function for Agent and Create Basic Chat Interface</h3>
+        <ul>
+          <li>Goals:
+            <ul>
+              <li>Create Azure Function App</li>
+              <li>Develop chat agent</li>
+              <li>Begin local testing</li>
+              <li>Set up GitHub repository</li>
+              <li>Deploy function app</li>
+            </ul>
+          </li>
+          <li>Outcomes:
+            <ul>
+              <li>Created Azure Function App resource</li>
+              <li>Performed initial unit tests for AgentClient and main.py</li>
+              <li>Performed initial static code analysis with flake8</li>
+              <li>Restructured project files for compatibility with Azure Function App (src/portfolio_assistant/main.py -> chat_function__init__.py)</li>
+              <li>Started local testing of chat agent functionality</li>
+              <li>Resolved local issues (authentication, query formatting)</li>
+              <li>Created deploy.yml for GitHub Actions CI/CD</li>
+              <li>Created GitHub repository and pushed initial code</li>
+              <li>Resolved deployment issues (environment variables, package contents)</li>
+              <li>Added GitHub secrets for function app</li>
+              <li>Set up basic user interface to test deployment</li>
+            </ul>
+          </li>
+          <li>Next Steps:
+            <ul>
+              <li>Continue refinement of chat agent</li>
+              <li>Continue testing and debugging</li>
+              <li>Start on AI Search implementation/integration</li>
+            </ul>
+          </li>
+        </ul>
+    </section>
+<section class="entry">
+     <time datetime="2025-09-14">2025-09-14</time>
+     <div class="tags">
+         <span class="pill dmaic">Phase: Improve</span><span class="pill agile">Day: 4</span><span class="pill agile">Status: done</span><span class="pill misc">semantic search</span><span class="pill misc">testing</span><span class="pill misc">integration</span><span class="pill misc">development</span>
+      </div>
+        <h3>Day 4: Integrate Semantic Search into Chat Agent</h3>
+        <ul>
+            <li>Goals:
+                <ul>
+                  <li>Set up Azure AI Search resource</li>
+                  <li>Add reference document base to Blob Storage Container</li>
+                  <li>Integrate semantic search into chat agent</li>
+                  <li>Deploy integrated search functionality</li>
+                </ul>
+            </li>
+            <li>Outcomes:
+                <ul>
+                <li>Created Azure AI Search resource</li>
+                <li>Added documents to Blob Storage Container</li>
+                <li>Developed SearchClient class</li>
+                <li>Updated chat function to incorporate SearchClient</li>
+                <li>Performed unit tests for SearchClient and chat function</li>
+                <li>Tested integrated search functionality locally</li>
+                <li>Resolved integration issues (authentication)</li>
+                </ul>
+            </li>
+            <li>Backlog:
+                <ul>
+                  <li>Deployment of chat agent with integrated search functionality</li>
+                </ul>
+            </li>
+            <li>Next Steps:
+                <ul>
+                <li>Continue development of chat agent with integrated search</li>
+                <li>Conduct further testing and QA</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+<section class="entry">
+     <time datetime="2025-09-15">2025-09-15</time>
+     <div class="tags">
+         <span class="pill dmaic">Phase: Improve</span><span class="pill dmaic">Phase: Control</span><span class="pill agile">Day: 5</span><span class="pill agile">Status: done</span><span class="pill misc">testing</span><span class="pill misc">UAT</span><span class="pill misc">QA</span><span class="pill misc">development</span><span class="pill misc">deployment</span>
+     </div>
+        <h3>Day 5: Deploy Agent with Integrated Search</h3>
+        <ul>
+            <li>Goals:
+                <ul>
+                  <li>Deploy chat agent with integrated search functionality</li>
+                  <li>Conduct comprehensive testing and QA</li>
+                  <li>Refine agent performance</li>
+                  <li>Prepare for going live</li>
+                  <li>Estimate cost of continued support beyond free trial</li>
+                </ul>
+            </li>
+            <li>Outcomes:
+                <ul>
+                <li>Deployed chat agent with integrated search functionality to Azure Function App</li>
+                <li>Addressed code linting issues</li>
+                <li>Performed user acceptance testing (UAT)</li>
+                <li>Identified issues with response quality</li>
+                <li>Iterative Improvements based on UAT</li>
+                  <ul>
+                    <li>Refined prompt engineering for better context utilization</li>
+                    <li>Added metadata on topics and source to documents and reindexed</li>
+                    <li>Changed content of model context and increased context length</li>
+                  </ul>
+                  <li>Deployment of improved chat agent</li>
+                </ul>
+              </li>
+            <li>Backlog:
+                <ul>
+                  <li>Prepare for going live (rate limiting)</li>
+                  <li>Estimate cost of continued support beyond free trial</li>
+                </ul>
+            </li>
+            <li>Next Steps:
+                <ul>
+                <li>Plan for future enhancements and maintenance</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <h2>Retrospective</h2>
+    <p>Throughout the project, following the overall plan but keeping 
+        daily tasks flexible was crucial for adapting to any challenges 
+        that arose. Extensive local testing and utilizing GitHub Actions 
+        for CI/CD significantly streamlined deployment and improved code quality.
+        I will continue to refine the agent and plan to make it available 
+        on my portfolio website once proper security measures are in place.
+        Although development on another project was disrupted, it 
+        was a worthy trade-off for the opportunity to learn about cloud 
+        computing and AI services, opening many new possibilities for 
+        augmenting my work.
+        </p>
+    <h3>Key Project Management Skills Demonstrated</h3>
+    <ul>
+      <li>Rapid requirements gathering/scope definition</li>
+      <li>Iterative planning and Agile-inspired execution</li>
+      <li>Time and resource management under tight constraints</li>
+      <li>Risk identification and mitigation (e.g., handling deployment issues)</li>
+      <li>Daily review and backlog management</li>
+      <li>Clear documentation of goals, outcomes, and next steps</li>
+    </ul>

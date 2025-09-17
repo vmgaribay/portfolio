@@ -23,7 +23,7 @@
       <div class="tags">
         <span class="pill dmaic">Phase: Define</span><span class="pill agile">Sprint: 1</span><span class="pill agile">Status: done</span><span class="pill misc">scoping</span><span class="pill misc">creative</span><span class="pill misc">foundation</span>
       </div>
-      <h3> Determinine the scope of the project based on available data</h3>
+      <h3>Sprint 1 Kickoff-Determine the scope of the project based on available data</h3>
         <ul>
       <li>User story: I would like to target my investment in launching a new cabinette lodging enterprise. 
         I want a ranked list of potential sites near U.S. National Parks to prioritize scouting efforts. 
@@ -49,7 +49,7 @@
       [x] park visitor center coordinate data <br>
       [x] OSM lodging and road data<br>
       [x] land status (public/private) data<br>
-      <del>[&ensp;] flood zone data</del>[deferred]<br>
+      <del>[&ensp;] flood zone data</del> [deferred]<br>
       [x] critical habitat data<br>
       [x] files documented in DATA_SOURCES.md
     </li>
@@ -90,15 +90,15 @@
   <time datetime="2025-09-08">2025-09-08</time>
   <div class="tags">
     <span class="pill dmaic">Phase: Analyze</span><span class="pill dmaic">Phase: Design</span><span class="pill agile">Sprint: 3</span>
-    <span class="pill agile">Status: in progress</span><span class="pill misc">scoring</span><span class="pill misc">spatial analysis</span>
+    <span class="pill agile">Status: done</span><span class="pill misc">scoring</span><span class="pill misc">spatial analysis</span>
   </div>
   <h3>Sprint 3 Planning-Begin site suitability analysis</h3>
   <ul>
     <li>Acceptance:<br>
-        [&ensp;] Define site scoring criteria in terms of demand, access, and competition<br>
-        [&ensp;] Design and implement workflow for identification of candidate locations (i.e., land with no known constraints within 30 miles of park visitor centers)<br>
-        [&ensp;] Design and implement workflow for calculation of candidate location features (e.g., proximity to visitor centers, access to roads)<br>
-        [&ensp;] Design workflow for adjustable scoring of candidate locations  <br>
+        [&ensp;] Define site scoring criteria in terms of demand, access, and competition [moved to Sprint 4 backlog]<br>
+        [x] Design and implement workflow for identification of candidate locations (i.e., land with no known constraints within 30 miles of park visitor centers)<br>
+        [&ensp;] Design and implement workflow for calculation of candidate location features (e.g., proximity to visitor centers, access to roads) [moved to Sprint 4 backlog]<br>
+        [&ensp;] Design workflow for adjustable scoring of candidate locations [moved to Sprint 4 backlog]  <br>
     </li>
     <li>Notes: All essential layers for the first iteration (visitor centers, visitation, lodging, roads, land status) have been preprocessed and loaded into the database. The next step is to develop scoring criteria for new cabin sites. The product owner wants to keep the scoring weights adjustable so that they may be readily modified and explored by the product user (who also happens to be me).</li>
     <li>Retrospective: Sprint 2 was successful in establishing a foundation for the analysis.</li>
@@ -109,7 +109,7 @@
   <time datetime="2025-09-09">2025-09-09</time>
   <div class="tags">
     <span class="pill dmaic">Phase: Design</span><span class="pill agile">Sprint: 4</span>
-    <span class="pill agile">Status: todo</span><span class="pill misc">ui-design</span><span class="pill misc">visualization</span>
+    <span class="pill agile">Status: in progress</span><span class="pill misc">ui-design</span><span class="pill misc">visualization</span>
     </div>
   <h3>Sprint 4 Planning</h3>
   <ul>
@@ -117,5 +117,26 @@
         [&ensp;] Create interactive dashboard to visualize and organize sites and scores<br>
     </li>
     <li>Notes: The UI of the dashboard should be geographic and intuitive, allow for easy exploration of alternative site scoring weights, and have clear visualizations of site scores and rankings. The main view should be of the top sites in the entire study region. Visitor centers should be selectable on the map to view their top site candidates. Sites themselves should be available for selection on the map to see their properties and scoring breakdowns.</li>
+  </ul>
+</section>
+
+
+<section class="entry">
+  <time datetime="2025-09-14">2025-09-14</time>
+  <div class="tags">
+    <span class="pill dmaic">Phase: Analyze</span><span class="pill dmaic">Phase: Design</span><span class="pill agile">Sprint: 4</span>
+    <span class="pill agile">Status: in progress</span><span class="pill misc">scoring</span><span class="pill misc">spatial analysis</span>
+    <span class="pill misc">ui-design</span><span class="pill misc">visualization</span>
+    </div>
+  <h3>Sprint 4 Kickoff</h3>
+  <ul>
+    <li>Acceptance:<br>
+      [&ensp;] Design and implement workflow for calculation of candidate location features (e.g., proximity to visitor centers, access to roads)<br>
+      [&ensp;] Design workflow for adjustable scoring of candidate locations  <br>
+      [&ensp;] Define site scoring criteria in terms of demand, access, and competition<br>
+      [&ensp;] Create interactive dashboard to visualize and organize sites and scores<br>
+    </li>
+    <li>Notes: Sprint 4 will now focus on completing the site suitability analysis and developing the interactive dashboard. The product owner has approved the new goals as generating mock data for the dashboard would only serve to delay progress towards a functional product.</li>
+    <li>Retrospective: In Sprint 3 only the workflow for identification of candidate locations was completed. The primary reason for delay was half of the sprint being unexpectedly allocated to another high-priority project, impacting my available capacity for the Cabinette project. On a positive note, planning Sprint 4 in advance was very useful in guiding the workflow development for Sprint 3.</li>
   </ul>
 </section>

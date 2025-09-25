@@ -9,14 +9,14 @@
 <body>
   <main class="log">
     <h1>Cabinette — Project Log</h1>
-    <p>This page will track the progress of my alternative acomodation siting analysis. I don't have much time to devote to it, unfortunately, but it will have served my purpose if it does any of the following...</p>
+    <p>This page will track the progress of my alternative accommodation siting analysis. I don't have much time to devote to it, unfortunately, but it will have served its purpose if it does any of the following...</p>
     <ul>
         <li>refreshes my memory on SQL, which I haven't touched since early in my Ph.D.</li>
         <li>helps me gain familiarity with framing problems and solutions in a business context.</li>
         <li>shows me exactly where to launch my cabinette <del>empire</del> enterprise</li>
     </ul>
     <p>I will be using <span style="display: inline-block; padding: 0.1rem 0.4rem; border-radius: 9px; background: rgba(var(--light), 0.12); font-size: 0.85rem; border: 2px solid rgba(13, 255, 0, 0.25);">DMAIC</span> (in this case, DMADV) and <span style="display: inline-block; padding: 0.1rem 0.4rem; border-radius: 9px; background: rgba(var(--light), 0.12); font-size: 0.85rem; border: 2px solid rgba(170, 0, 255, 0.25);">Agile</span> 
-  principles to guide my work as indicated by the tags in each entry. Sprints will be weekly, and posts will be as-needed to plan and document progress. I will do my best to wear both user and product owner hats and keep the tool as realistic as possible; obviously, there are very real concerns about feasibility (parcel slope, favorability of state laws, wildfire risk, etc.) which extend beyond the scope of this project. They may be considered at a later stage.</p>
+  principles to guide my work as indicated by the tags in each entry. Sprints will be weekly, and posts will be as-needed to plan and document progress. I will do my best to wear both user and product owner hats and keep the tool as realistic as possible; obviously, there are very real concerns about feasibility (parcel slope, utility availability, favorability of state laws, wildfire risk, etc.) which extend beyond the current scope of this project. They may be considered at a later stage.</p>
 
     <section class="entry">
       <time datetime="2025-08-23">2025-08-23</time>
@@ -29,7 +29,7 @@
         I want a ranked list of potential sites near U.S. National Parks to prioritize scouting efforts. 
         Some considerations I have are the desirability of proximity to multiple parks and consciousness of how competitive the market is.
       </li>
-      <li>Acceptance: <br>
+      <li>Acceptance:<br>
         [x] problem statement documented<br>
         [x] KPIs documented <br>
       </li>
@@ -44,7 +44,7 @@
   </div>
   <h3>Spike: gather initial datasets</h3>
   <ul>
-    <li>Acceptance: <br>
+    <li>Acceptance:<br>
       [x] NPS visitation data <br>
       [x] park visitor center coordinate data <br>
       [x] OSM lodging and road data<br>
@@ -138,5 +138,25 @@
     </li>
     <li>Notes: Sprint 4 will now focus on completing the site suitability analysis and developing the interactive dashboard. The product owner has approved the new goals as generating mock data for the dashboard would only serve to delay progress towards a functional product.</li>
     <li>Retrospective: In Sprint 3 only the workflow for identification of candidate locations was completed. The primary reason for delay was half of the sprint being unexpectedly allocated to another high-priority project, impacting my available capacity for the Cabinette project. On a positive note, planning Sprint 4 in advance was very useful in guiding the workflow development for Sprint 3.</li>
+  </ul>
+</section>
+
+
+<section class="entry">
+  <time datetime="2025-09-22">2025-09-22</time>
+  <div class="tags">
+    <span class="pill dmaic">Phase: Design</span><span class="pill dmaic">Phase: Verify</span><span class="pill agile">Sprint: 5</span>
+    <span class="pill agile">Status: in progress</span>
+    <span class="pill misc">ui-design</span><span class="pill misc">visualization</span>
+    </div>
+  <h3>Sprint 5 Kickoff</h3>
+  <ul>
+    <li>Acceptance:<br>
+      [&ensp;] Refine interactive dashboard after further testing<br>
+      [&ensp;] Push changes in workflow scripts<br>
+      [&ensp;] Determine strategy for dashboard "deployment"<br>
+    </li>
+    <li>Notes: In Sprint 5, the rudimentary map dashboard will be refined to improve functionality and UX. Since I have only limited access to Power BI Desktop, I will need to look into less conventional ways to share or showcase the dashboard.</li>
+    <li>Retrospective: Due to the backlog from Sprint 3, there was an exceptionally high workload in Sprint 4. The product owner approved the first iteration of the dashboard, but some of the functionalities planned, namely the rank table, still have issues that need debugging for product user use.  </li>
   </ul>
 </section>

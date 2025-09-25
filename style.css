@@ -244,10 +244,10 @@ section h3 {
   content: var(--hint);
   position: absolute;
   left: 50%;
-  bottom: 40%;
+  bottom: 15%;
   transform: translateX(-50%) skew(-5deg);
   background: rgba(var(--dark),0.8);
-  color: rgb(var(--light));
+  color: rgb(var(--accent));
   padding: .35rem .75rem;
   border-radius: 999px;
   font-size: .9rem;
@@ -300,6 +300,25 @@ section h3 {
     font-size .3s ease;
   font-size: 1em;
 }
+
+.project_keywords {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+  transform: translateX(-50%) skew(-5deg);
+  background: rgba(var(--dark), 0.85);
+  color: rgb(var(--accent));
+  padding: 1rem 4rem;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  z-index: 4;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
 .project_description {
   display: none;
   position: absolute;
@@ -361,6 +380,10 @@ section h3 {
   background: rgba(var(--dark), 0.9);
   color:  rgb(var(--light));
   font-size: 1.5em;
+}
+.project_gallery:not(.has-active) .project:hover .project_keywords {
+  display: block;
+  opacity: 1;
 }
 
 

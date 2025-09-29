@@ -7,6 +7,19 @@
 
 </head>
 <body>
+    <header id="header-scroll" class="shrink">
+
+        <h1><a href="index.html">Victoria M. Garibay, Ph.D.</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Featured Projects</a></li>
+                <li><a href="index.html#publications">Publications</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
   <main class="log">
     <h1>Cabinette — Project Log</h1>
     <p>This page will track the progress of my alternative accommodation siting analysis. I don't have much time to devote to it, unfortunately, but it will have served its purpose if it does any of the following...</p>
@@ -131,10 +144,10 @@
   <h3>Sprint 4 Kickoff</h3>
   <ul>
     <li>Acceptance:<br>
-      [&ensp;] Design and implement workflow for calculation of candidate location features (e.g., proximity to visitor centers, access to roads)<br>
-      [&ensp;] Design workflow for adjustable scoring of candidate locations  <br>
-      [&ensp;] Define site scoring criteria in terms of demand, access, and competition<br>
-      [&ensp;] Create interactive dashboard to visualize and organize sites and scores<br>
+      [x] Design and implement workflow for calculation of candidate location features (e.g., proximity to visitor centers, access to roads)<br>
+      [x] Design workflow for adjustable scoring of candidate locations  <br>
+      [x] Define site scoring criteria in terms of demand, access, and competition<br>
+      [x] Create interactive dashboard to visualize and organize sites and scores<br>
     </li>
     <li>Notes: Sprint 4 will now focus on completing the site suitability analysis and developing the interactive dashboard. The product owner has approved the new goals as generating mock data for the dashboard would only serve to delay progress towards a functional product.</li>
     <li>Retrospective: In Sprint 3 only the workflow for identification of candidate locations was completed. The primary reason for delay was half of the sprint being unexpectedly allocated to another high-priority project, impacting my available capacity for the Cabinette project. On a positive note, planning Sprint 4 in advance was very useful in guiding the workflow development for Sprint 3.</li>
@@ -146,17 +159,43 @@
   <time datetime="2025-09-22">2025-09-22</time>
   <div class="tags">
     <span class="pill dmaic">Phase: Design</span><span class="pill dmaic">Phase: Verify</span><span class="pill agile">Sprint: 5</span>
-    <span class="pill agile">Status: in progress</span>
-    <span class="pill misc">ui-design</span><span class="pill misc">visualization</span>
+    <span class="pill agile">Status: done</span><span class="pill misc">ui-design</span><span class="pill misc">visualization</span>
     </div>
   <h3>Sprint 5 Kickoff</h3>
   <ul>
     <li>Acceptance:<br>
-      [&ensp;] Refine interactive dashboard after further testing<br>
-      [&ensp;] Push changes in workflow scripts<br>
-      [&ensp;] Determine strategy for dashboard "deployment"<br>
+      [x] Refine interactive dashboard after further testing<br>
+      [x] Push changes in workflow scripts<br>
+      [x] README updated with database reproduction instructions<br>
+      [x] Supporting data published<br>
+      [x] Dashboard that meets KPIs<br>
+      [x] Determine strategy for dashboard "deployment"<br>
     </li>
     <li>Notes: In Sprint 5, the rudimentary map dashboard will be refined to improve functionality and UX. Since I have only limited access to Power BI Desktop, I will need to look into less conventional ways to share or showcase the dashboard.</li>
     <li>Retrospective: Due to the backlog from Sprint 3, there was an exceptionally high workload in Sprint 4. The product owner approved the first iteration of the dashboard, but some of the functionalities planned, namely the rank table, still have issues that need debugging for product user use.  </li>
   </ul>
 </section>
+
+
+<section class="entry">
+  <time datetime="2025-09-29">2025-09-29</time>
+  <div class="tags">
+    <span class="pill dmaic">Phase: Control</span><span class="pill agile">Sprint: 5</span>
+    <span class="pill agile">Status: done</span><span class="pill misc">release</span><span class="pill misc">milestone</span>
+    </div>
+  <h3>Sprint 5 Review-First Iteration of Dashboard Available</h3>
+  <ul>
+    <li>Notes: The dashboard is running locally and meets or exceeds the requirements set by the KPIs. The product user was satisfied with the ease of changing scoring methods and weights but finds the map "fiddly". The product owner is satisfied that the KPIs were delivered on the first iteration and is eager to expand on the logistical aspects, starting with the deferred features.</li>
+    <li>Retrospective: Through careful rearrangement of sprint tasks, it was possible to deliver the first iteration of the dashboard on time. The next sprint will be far in the future, likely necessitating updates to the data sources. Online publication of the Power BI report without affiliation or paying for licensing was unfortunately not feasible.</li>
+    <li>Known Issues: The desktop version of the dashboard map can be difficult to interact with, zooming suboptimally, but this seems engrained in the behavior of Icon Map.</li>
+    <li>Next Steps: Further development is not planned until there is hope of an actual use case. User feedback is welcome via email or as a GitHub issue.</li>
+  </ul>
+</section>
+<p>
+  <strong>Resources:</strong><br>
+  <a href="https://github.com/vmgaribay/cabinette">GitHub Repository</a><br>
+  <a href="https://doi.org/10.5281/zenodo.17219999">Published Dashboard on Zenodo</a>
+</p>
+  </main>
+</body>
+</html>

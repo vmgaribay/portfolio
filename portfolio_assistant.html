@@ -278,3 +278,58 @@ and leave room to refine the plan as needed.</li>
       <li>Daily review and backlog management</li>
       <li>Clear documentation of goals, outcomes, and next steps</li>
     </ul>
+  
+    <h2>Project Log, Continued: Revisiting Efficiency</h2>
+
+<section class="entry">
+     <time datetime="2025-11-09">2025-11-09</time>
+     <div class="tags">
+         <span class="pill dmaic">Phase: Improve</span><span class="pill agile">Day: 6</span><span class="pill agile">Status: done</span><span class="pill misc">cost optimization</span><span class="pill misc">development</span>
+     </div>
+        <h3>Day 6: Replace AI Search</h3>
+        <p>While it meets the needs of the project, the Azure AI Search is not really being utilized to its full potential. It would be smart to look into more cost-effective alternatives that still apply advanced search techniques. This is not high priority, as I have the ability to maintain the current infrastructure while I develop an alternative solution. After successful testing, I will switch to the new search client. I will target completion by the end of the month.</p>
+        <ul>
+            <li>Goals:
+                <ul>
+                  <li>Improve cost of integrated search functionality</li>
+                </ul>
+            </li>
+            <li>Outcomes:
+                <ul>
+                <li>Researched alternative search solutions</li>
+                <li>Decided to implement Apache Solr</li>
+                <li>Created Azure Virtual Machine to run Solr search</li>
+                </ul>
+              </li>
+
+  </ul>
+</section>
+<section class="entry">
+     <time datetime="2025-11-10">2025-11-10</time>
+     <div class="tags">
+         <span class="pill dmaic">Phase: Improve</span><span class="pill agile">Day: 7</span><span class="pill agile">Status: done</span><span class="pill misc">development</span><span class="pill misc">deployment</span>
+     </div>
+        <h3>Day 7: Integrate Solr Search into Chat Agent</h3>
+        <ul>
+            <li>Goals:
+                <ul>
+                  <li>Integrate Solr search into chat agent</li>
+                  <li>Deploy integrated search functionality</li>
+                </ul>
+            </li>
+            <li>Outcomes:
+                <ul>
+                <li>Added new indexer script (index_for_solr.py)</li>
+                <li>Added new class to search_client.py (SolrSearchClient)</li>
+                <li>Updated chat function to use new search class</li>
+                </ul>
+              </li>
+              <li>Backlog:
+                  <ul>
+                  <li>Deploy integrated search functionality</li>
+                  </ul>
+              </li>
+          </ul>
+              </li>
+
+  </ul>

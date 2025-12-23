@@ -191,9 +191,95 @@
     <li>Next Steps: Further development is not planned until there is hope of an actual use case. User feedback is welcome via email or as a GitHub issue.</li>
   </ul>
 </section>
+
+<section class="entry">
+  <time datetime="2025-11-30">2025-11-30</time>
+  <div class="tags">
+    <span class="pill dmaic">Phase: Define</span>
+    <span class="pill agile">Sprint 6</span><span class="pill agile">Status: in progress</span>
+    <span class="pill misc">dashboard</span><span class="pill misc">javascript</span><span class="pill misc">spatial</span>
+    <span class="pill misc">open-source</span>
+  </div>
+  <h3>Sprint 6 Kickoff</h3>
+  <ul>
+    <li>Notes: In order to gain more practical JS experience and create a more conveniently accessible dashboard, I will be recreating the cabinette dashboard using open-source JavaScript/TypeScript tools.
+      As opposed to the mini-sprints I was conducting in the earlier phases, this will be a more traditional sprint lasting several weeks to the end of 2025.
+      I am extending the window to accomodate the holiday season. KPIs will reflect, at minimum, feature parity with the Power BI dashboard.
+    </li>
+
+    <li>Acceptance:<br>
+      [&ensp;] Dashboard prototype that meets KPIs<br>
+    </li>
+    <li>Key Performance Indicators (KPIs):
+      <ul>
+        <li>Users can pan, zoom, and select features on an interactive map.</li>
+        <li>Charts/graphs will be integrated with feature selection to display site scores and rankings.</li>
+        <li>Users can adjust scoring weights and filter sites dynamically.</li>
+        <li>Dashboard loads within 30 seconds for existing datasets.</li>
+      </ul>
+  </ul>
+    </li>
+    <li>Planned Steps:
+      <ul>
+        <li>Define requirements: List core features, data sources, and user needs</li>
+        <li>Investigate applicability of proposed tech stack: React (TypeScript), Leaflet, Plotly.js</li>
+        <li>Set up project: Configure folder structure and basic files</li>
+        <li>Implement core features:
+          <ul>
+            <li>Data loading from APIs</li>
+            <li>Map component for spatial data</li>
+            <li>Chart components for non-spatial data</li>
+            <li>Interactive filters and controls</li>
+          </ul>
+        </li>
+        <li>Testing & QA: Write unit/integration tests and validate with real datasets.</li>
+        <li>Deployment: Host on Azure App Service (or similar), set up CI/CD.</li>
+        <li>Documentation: Write setup and user guides.</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section class="entry">
+  <time datetime="2025-12-15">2025-12-15</time>
+  <div class="tags">
+    <span class="pill dmaic">Phase: Design</span>
+    <span class="pill agile">Sprint 6</span><span class="pill agile">Status: in progress</span>
+    <span class="pill misc">infrastructure planning</span><span class="pill misc">PostgreSQL</span>
+  </div>
+  <h3>Sprint 6 Midpoint Standup/Review</h3>
+  <ul>
+    <li>Notes: The project infrastructure has been planned and set up. The required (based on PowerBI model) tables from the PostgreSQL database are hosted on Neon an accessed via GCP to support dynamic SQL queries. Progress has started on the front-end using React (TypeScript) for UI components, Leaflet for interactive maps, and Plotly.js for data visualizations. The app will be hosed in a separate repository <a href="https://github.com/vmgaribay/cabinette-frontend">Cabinette-Frontend</a></li>
+    <li>Next Steps:
+      <ul>
+        <li>Continue development of map views</li>
+        <li>Create chart components</li>
+        <li>Add interactive filters and controls</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section class="entry">
+  <time datetime="2025-12-23">2025-12-23</time>
+  <div class="tags">
+    <span class="pill dmaic">Phase: Design</span>
+    <span class="pill agile">Sprint 6</span><span class="pill agile">Status: in progress</span>
+    <span class="pill misc">architecture</span>
+    <span class="pill misc">frontend</span><span class="pill misc">API</span>
+  </div>
+  <h3>Sprint 6 Update</h3>
+  <ul>
+    <li>
+      <strong>Notes:</strong> Progress continues with components. All basic functionalities from the Power BI report have been replicated with the exception of the site visitation gagues which require further troubleshooting. There was a decision to be made on whether to maintain query logic on the client side or move it to the API. 
+      Given the current scope and dataset size, keeping query/filter/sort logic on the client side seemed like the better choice and has simplified development. Although such a scenario is currently not foreseen, this issue may be revisited if there is ever a need to scale the app up.
+    </li>
+  </ul>
+</section>
+
 <p>
   <strong>Resources:</strong><br>
-  <a href="https://github.com/vmgaribay/cabinette">GitHub Repository</a><br>
+  <a href="https://github.com/vmgaribay/cabinette">Cabinette SQL GitHub Repository</a><br>
+  <a href="https://github.com/vmgaribay/cabinette-frontend">Cabinette Frontend GitHub Repository</a><br>
   <a href="https://doi.org/10.5281/zenodo.17219999">Published Dashboard on Zenodo</a>
 </p>
   </main>

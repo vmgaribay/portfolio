@@ -21,6 +21,15 @@ body {
   justify-content: center; 
 
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lucida Sans", "Perpetua", serif;
+  color: rgb(var(--xlight));
+}
 a {
   text-decoration: none;
   color: rgb(var(--xlight));
@@ -72,6 +81,10 @@ a.active {
   text-decoration: none;
   display: inline-block;
   font-family: 'Lucida Sans', 'Perpetua', serif;
+}
+#header-scroll.shrink h1 a{
+  position: relative;
+  z-index: 1001;
 }
 /* Navigation*/
 nav {

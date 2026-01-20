@@ -298,7 +298,7 @@
   </ul>
 </section>
 <section class="entry">
-  <time datetime="2026-01-07">2026-01-07</time>
+  <time datetime="2026-01-20">2026-01-20</time>
   <div class="tags">
     <span class="pill dmaic">Phase: Improve</span><span class="pill agile">Feature Spike</span>
     <span class="pill agile">Status: done</span>
@@ -309,16 +309,18 @@
   <h3>Incorporate Bookmarks and Theme Toggle: Response to User Feedback</h3>
   <ul>
     <li>
-      Notes: Recent user feedback highlighted the desire for a way to bookmark favorite sites and the option for a lighter theme. In response, a site bookmarking functionality and a theme toggle will be added.
+      Notes (2026-01-07): Recent user feedback highlighted the desire for a way to bookmark favorite sites and the option for a lighter theme. In response, a site bookmarking functionality and a theme toggle will be added.
     </li>
     <li>Acceptance:<br>
       [x] Site bookmarks can be toggled from the text details card or ranking table<br>
-      [&ensp] Bookmarked sites are accessible in a filtered view<br>
+      [x] Bookmarked sites are accessible in a filtered view<br>
       [x] Users can toggle between light and dark themes<br>
       [x] Bookmarks/theme persist across sessions using local storage<br>
       </ul>
     </li>
-
+      <li>
+      Retrospective: Upon clarifying user feedback, it was determined that the introduction of bookmark utilities was also a requirement, so upload, download, and merge capacity was added. The new features were well-received in user testing. After weighing the complexity tradeoff, Redux was introduced to manage a global state for bookmarks and theme preference across components. This helped streamline the visible site filtering, with a selector being applied to address a staleness issue.
+    </li>
 
   </ul>
 </section>

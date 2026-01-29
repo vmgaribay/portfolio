@@ -126,11 +126,42 @@ nav ul li a:hover {
 
 li {
   margin-bottom: 0.5rem;  /* Adds space below each list item */
+  position: relative;
 }
 
-/* If you want to remove the space after the last item in a list */
 li:last-child {
   margin-bottom: 0;
+}
+
+.tooltip-trigger {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-trigger:hover > .tooltip,
+.tooltip-trigger:focus-within > .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  display: inline-block;
+  width: 300px;
+  margin-left: 8px;
+  background:rgb(var(--dark));
+  color: rgb(var(--light));
+  border: 1px solid rgb(var(--light));
+  padding: 8px 8px;
+  border-radius: 4px;
+  font-size: 1em;
+  position: absolute;
+  left: 110%;
+  top: 0;
+  z-index: 1000;
+
 }
 
 section {

@@ -138,30 +138,19 @@ li:last-child {
   display: inline-block;
   cursor: pointer;
 }
-
+/* 
 .tooltip-trigger:hover > .tooltip,
 .tooltip-trigger:focus-within > .tooltip {
   visibility: visible;
   opacity: 1;
-}
+} */
 
+/* ...existing code... */
 .tooltip {
   visibility: hidden;
   opacity: 0;
-  display: inline-block;
-  width: 300px;
-  margin-left: 8px;
-  background:rgb(var(--dark));
-  color: rgb(var(--light));
-  border: 1px solid rgb(var(--light));
-  padding: 8px 8px;
-  border-radius: 4px;
-  font-size: 1em;
   position: absolute;
-  left: 110%;
-  top: 0;
-  z-index: 1000;
-
+  pointer-events: none;
 }
 
 section {
@@ -671,3 +660,33 @@ form button:hover {
 #chat-form { display: flex; gap: .5rem; align-items: center; }
 #chat-input { flex: 1; padding: .5rem .75rem; }
 #chat-send { padding: .5rem .75rem; white-space: nowrap; }
+
+
+/* AOI Element */
+#about { position: relative; }
+
+#aoi-element {
+  position: absolute;
+  left: 50%;
+  transform: translateX(calc(-50% + clamp(0px, 330px, 340px)));
+  top: 62%;
+  width: 225px;
+  max-width: 90%;
+  background: rgb(var(--dark));
+  color: rgb(var(--light));
+  border: 1px solid rgba(var(--light),0.15);
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s ease, transform .15s ease;
+  font-size: 0.95rem;
+}
+
+#aoi-element.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(calc(-50% + clamp(0px, 330px, 340px)));
+}

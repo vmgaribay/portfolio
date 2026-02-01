@@ -130,3 +130,31 @@ document.getElementById('hamburger').onclick = function() {
     }
   });
 })();
+
+// Education AOI info box
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('aoi-element');
+  if (!container) return;
+  const triggers = document.querySelectorAll('.tooltip-trigger');
+
+  triggers.forEach(trigger => {
+    const source = trigger.querySelector('.tooltip');
+    if (!source) return;
+
+    const show = (html) => {
+      container.innerHTML = html;
+      container.classList.add('visible');
+      container.setAttribute('aria-hidden', 'false');
+    };
+    const hide = () => {
+      container.classList.remove('visible');
+      container.setAttribute('aria-hidden', 'true');
+    };
+
+    trigger.addEventListener('mouseenter', () => show(source.innerHTML));
+    trigger.addEventListener('mouseleave', hide);
+    trigger.addEventListener('focusin', () => show(source.innerHTML));
+    trigger.addEventListener('focusout', hide);
+
+  });
+});

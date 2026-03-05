@@ -109,10 +109,10 @@
   <h3>Sprint 3 Planning-Begin site suitability analysis</h3>
   <ul>
     <li>Acceptance:<br>
-        [&ensp;] Define site scoring criteria in terms of demand, access, and competition [moved to Sprint 4 backlog]<br>
+        [x] Define site scoring criteria in terms of demand, access, and competition [moved to Sprint 4 backlog]<br>
         [x] Design and implement workflow for identification of candidate locations (i.e., land with no known constraints within 30 miles of park visitor centers)<br>
-        [&ensp;] Design and implement workflow for calculation of candidate location features (e.g., proximity to visitor centers, access to roads) [moved to Sprint 4 backlog]<br>
-        [&ensp;] Design workflow for adjustable scoring of candidate locations [moved to Sprint 4 backlog]  <br>
+        [x] Design and implement workflow for calculation of candidate location features (e.g., proximity to visitor centers, access to roads) [moved to Sprint 4 backlog]<br>
+        [x] Design workflow for adjustable scoring of candidate locations [moved to Sprint 4 backlog]  <br>
     </li>
     <li>Notes: All essential layers for the first iteration (visitor centers, visitation, lodging, roads, land status) have been preprocessed and loaded into the database. The next step is to develop scoring criteria for new cabin sites. The product owner wants to keep the scoring weights adjustable so that they may be readily modified and explored by the product user (who also happens to be me).</li>
     <li>Retrospective: Sprint 2 was successful in establishing a foundation for the analysis.</li>
@@ -320,6 +320,33 @@
     </li>
       <li>
       Retrospective: Upon clarifying user feedback, it was determined that the introduction of bookmark utilities was also a requirement, so upload, download, and merge capacity was added. The new features were well-received in user testing. After weighing the complexity tradeoff, Redux was introduced to manage a global state for bookmarks and theme preference across components. This helped streamline the visible site filtering, with a selector being applied to address a staleness issue.
+    </li>
+
+  </ul>
+</section>
+<section class="entry">
+  <time datetime="2026-03-05">2026-03-05</time>
+  <div class="tags">
+    <span class="pill dmaic">Phase: Improve</span><span class="pill agile">Feature Spike</span>
+    <span class="pill agile">Status: in-progress</span>
+    <span class="pill misc">user-feedback</span>
+    <span class="pill misc">feature-addition</span>
+    <span class="pill misc">reactour</span>
+  </div>
+  <h3>Add Feature Walkthrough: Response to User Feedback</h3>
+  <ul>
+    <li>
+      Notes: Observation of user behavior indicates that while the interface is intuitive, there is context missing. Rather than relying on users to pursue the About link, an optional feature walkthrough will be offered. Libraries considered included reactour, react-joyride, and shepard.js. As this is to be a simple guide through features, reactour was chosen for lightness and ease of integration.
+    </li>
+    <li>Acceptance:<br>
+      [&ensp;] Walkthrough will be triggered on click of "Take a Tour" (or similar) button<br>
+      [&ensp;] Map polygon/point selection response will be highlighted<br>
+      [&ensp;] Bookmarking feature will be highlighted<br>
+      [&ensp;] Map filtration response will be highlighted<br>
+      [&ensp;] Theme toggle will be highlighted<br>
+      </ul>
+    </li>
+      <li>
     </li>
 
   </ul>

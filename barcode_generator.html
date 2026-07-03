@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Cabinette — Project Log</title>
+  <link rel="icon" type="image/png" href="images/elephant-thinking-icon.png">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+ <script src="barcode_generator.js" defer></script>
+
+</head>
+<body>
+    <header id="header-scroll" class="shrink">
+
+        <h1><a href="index.html">Victoria M. Garibay, Ph.D.</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Featured Projects</a></li>
+                <li><a href="index.html#publications">Publications</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+  <h1>Barcode Generator</h1>
+  <h3>Works with UPCs and more...</h3>
+  <form>
+<input class="input" id="codeInput" type="text" placeholder="Barcode" >
+                <select class="dropdown" id="barcodeType" title="UPC">
+                  <option value="UPC">UPC</option>
+                  <option value="CODE128">CODE128 auto</option>
+                  <option value="CODE128A">CODE128 A</option>
+                  <option value="CODE128B">CODE128 B</option>
+                  <option value="CODE128C">CODE128 C</option>
+                  <option value="EAN13">EAN13</option>
+                  <option value="EAN8">EAN8</option>
+                  <option value="CODE39">CODE39</option>
+                  <option value="ITF14">ITF14</option>
+                  <option value="ITF">ITF</option>
+                  <option value="MSI">MSI</option>
+                  <option value="MSI10">MSI10</option>
+                  <option value="MSI11">MSI11</option>
+                  <option value="MSI1010">MSI1010</option>
+                  <option value="MSI1110">MSI1110</option>
+                  <option value="pharmacode">Pharmacode</option>
+                </select>
+              
+  </form>
+
+  <p id="barcode-status" role="status" aria-live="polite"></p>
+
+
+  <div class="barcode-backing">
+    <svg id="barcode"></svg>
+  </div>
+
+</main>
+</body>
+</html>

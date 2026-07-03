@@ -578,6 +578,21 @@ form button {
 form button:hover {
     background: rgb(var(--accent));
 }
+
+.dropdown {
+    width: 30%;
+    padding: 0.75rem;
+    background: rgba(var(--xlight),0.06);
+    border: 1px solid rgba(var(--accent),0.25);
+    border-radius: 8px;
+    color: rgb(var(--light));
+    font-family: 'Lucida Sans', 'Perpetua', serif;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+
+}
+
 #confirmation {
   max-width: 600px;
   margin: 3rem auto;
@@ -689,4 +704,17 @@ form button:hover {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(calc(-50% + clamp(0px, 330px, 340px)));
+}
+
+/* Container for barcode */
+.barcode-backing {
+  max-width: 600px;  
+  margin: 1.5rem auto 2rem;
+  padding: 1.25rem;
+  background: rgba(var(--xlight), 0.15);
+  border: 1px solid rgba(var(--accent), 0.22);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  display: flex;
+  justify-content: center;
 }

@@ -82,7 +82,7 @@ document.getElementById('hamburger').onclick = function() {
   function appendMessage(role, text) {
     const li = document.createElement('li');
     li.className = role;
-    li.textContent = text;
+    li.innerHTML = text;
     log.appendChild(li);
     log.scrollTop = log.scrollHeight;
   }

@@ -218,7 +218,6 @@
         <li>Users can adjust scoring weights and filter sites dynamically.</li>
         <li>Dashboard loads within 30 seconds for existing datasets.</li>
       </ul>
-  </ul>
     </li>
     <li>Planned Steps:
       <ul>
@@ -316,7 +315,6 @@
       [x] Bookmarked sites are accessible in a filtered view<br>
       [x] Users can toggle between light and dark themes<br>
       [x] Bookmarks/theme persist across sessions using local storage<br>
-      </ul>
     </li>
       <li>
       Retrospective: Upon clarifying user feedback, it was determined that the introduction of bookmark utilities was also a requirement, so upload, download, and merge capacity was added. The new features were well-received in user testing. After weighing the complexity tradeoff, Redux was introduced to manage a global state for bookmarks and theme preference across components. This helped streamline the visible site filtering, with a selector being applied to address a staleness issue.
@@ -344,16 +342,65 @@
       [x] Bookmarking feature will be highlighted<br>
       [x] Map filtration response will be highlighted<br>
       [x] Theme toggle will be highlighted<br>
-      </ul>
     </li>
-      <li>
+    <li>
       Retrospective: The features are now individually explained. Sufficient user feedback has not been collected for the walkthrough; however, initial impressions indicated that it was overly verbose, so the steps were split into smaller steps. Reactour was fairly easy to work with, it seems to have evolved substantially from version to version, making springboarding off of examples a challenge, but the documentation itself was accurate.
 
     </li>
 
   </ul>
 </section>
+<section class="entry">
+  <time datetime="2026-09-14">2026-09-14</time>
+  <div class="tags">
+    <span class="pill dmaic">Phase: Design</span>
+    <span class="pill agile">Sprint: 7</span><span class="pill agile">Status: done</span>
+    <span class="pill misc">infrastructure planning</span><span class="pill misc">PostgreSQL</span><span class="pill misc">migration</span>
+  </div>
 
+  <h3>Sprint 7 Planning</h3>
+
+  <ul>
+    <li>
+      Neon Azure regions are being deprecated (Oct. 5, 2026). Rather than migrating to Neon AWS, this junction provided an opportunity to explore similar options. 
+      Unfortunately, there are few alternatives that are low to no cost and support PostgreSQL/PostGIS. Azure was considered due to the familiarity of the team with other Azure products, but Supabase is more economical for the small project size.
+      Once the database is migrated to Supabase, the app will be connected to the new database and tested for functionality. The primary measure of success will be that the original KPIs are still met.
+    </li>
+
+    <li>Acceptance:<br>
+      [x] Database imported into Supabase<br><br>
+      [x] Database connection string tested locally<br>
+      [x] Database connection updated in Vercel<br>
+      [x] App redeployed and accessible at the same URL<br>
+      [x] User tests indicate that KPIs are still met<br>
+      [x] Migration event documented in README.md<br>
+    </li>
+
+    <li>
+      Notes: The database will be given an initial check for consistency after the migration to ensure essential tables (vc_site_features, vc_site_rel) appear complete. 
+      The connection string will be updated in the Vercel environment variables, and the app will be redeployed for testing.
+      In the event that the app is not functional after the migration (and the problem can not be diagnosed), the app and database connection will be restored to the previous arrangement (Neon) versions, 
+      and alternative solutions will be explored.
+    </li>
+  </ul>
+</section>
+<section class="entry">
+  <time datetime="2026-09-27">2026-09-27</time>
+  <div class="tags">
+    <span class="pill dmaic">Phase: Verify</span>
+    <span class="pill agile">Sprint: 7</span><span class="pill agile">Status: done</span>
+    <span class="pill misc">deployment</span><span class="pill misc">UAT</span><span class="pill misc">migration</span>
+  </div>
+
+  <h3>Sprint 7 Review</h3>
+
+  <ul>
+    <li>
+       Retrospective: Recreating the datbase in Supabase using the proceedure in the readme was simpler than it would have been to migrate it directly from Neon. 
+       PostGIS was easy to activate in Supabase as an extension. Once the APIs were functioning in local testing, a small style change was made to the UI and it was pushed to development and merged to production. The live app functionality has been verified in UAT.
+    </li>
+  </ul>
+</section>
 <p>
   <strong>Resources:</strong><br>
   <a href="https://github.com/vmgaribay/cabinette">Cabinette SQL GitHub Repository</a><br>
